@@ -3,7 +3,7 @@ components:
   - event_bindings: {click: sales_page_link_click}
     layout_properties: {}
     name: sales_page_link
-    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: '', icon: 'fa:bar-chart', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Sales, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: '', icon: 'fa:arrows', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Order, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   - event_bindings: {click: reports_page_link_click}
     layout_properties: {}
