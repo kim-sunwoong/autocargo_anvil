@@ -1,0 +1,71 @@
+allow_embedding: false
+correct_dependency_ids: {}
+db_schema:
+  files:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: filename
+      type: string
+    - admin_ui: {width: 200}
+      name: author
+      target: users
+      type: link_single
+    - admin_ui: {width: 200}
+      name: created
+      type: datetime
+    server: full
+    title: Files
+  users:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: email
+      type: string
+    - admin_ui: {width: 200}
+      name: enabled
+      type: bool
+    - admin_ui: {width: 200}
+      name: last_login
+      type: datetime
+    - admin_ui: {width: 200}
+      name: password_hash
+      type: string
+    - admin_ui: {width: 200}
+      name: n_password_failures
+      type: number
+    - admin_ui: {width: 200}
+      name: confirmed_email
+      type: bool
+    - admin_ui: {width: 200}
+      name: signed_up
+      type: datetime
+    - admin_ui: {width: 200}
+      name: name
+      type: string
+    - admin_ui: {width: 200}
+      name: remembered_logins
+      type: simpleObject
+    server: full
+    title: Users
+dependencies: []
+name: Dashboard Template B
+native_deps: {head_html: ''}
+package_name: Dashboard_Template_B
+renamed: true
+runtime_options:
+  client_version: '3'
+  preview_v3: false
+  server_spec: null
+  server_spec_disabled: {base: python310-minimal, requirements: ''}
+  server_version: python3-sandbox
+  version: 2
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+- client_config: {allow_remember_me: true, allow_signup: true, confirm_email: false, enable_automatically: true, remember_me_days: 30, use_email: true}
+  server_config: {user_table: users}
+  source: /runtime/services/anvil/users.yml
+startup: {module: Frame, type: form}
+startup_form: null

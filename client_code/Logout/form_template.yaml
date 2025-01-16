@@ -1,0 +1,21 @@
+components:
+- layout_properties: {grid_position: 'DYAUDA,LEQJDN'}
+  name: spacer_1
+  properties: {height: 70}
+  type: Spacer
+- components:
+  - layout_properties: {grid_position: 'WGCEAI,REKMYB'}
+    name: label_1
+    properties: {align: center, role: title, text: You have been signed out!}
+    type: Label
+  - event_bindings: {click: signin_button_click}
+    layout_properties: {grid_position: 'MVEXVL,ZSJBMJ'}
+    name: signin_button
+    properties: {role: filled-button, text: Sign In}
+    type: Button
+  layout_properties: {grid_position: 'ZVNGBC,XHSZSH'}
+  name: column_panel_1
+  properties: {role: tonal-card}
+  type: ColumnPanel
+container: {type: ColumnPanel}
+is_package: true

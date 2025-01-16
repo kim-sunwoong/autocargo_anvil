@@ -1,0 +1,45 @@
+components:
+- components:
+  - event_bindings: {click: sales_page_link_click}
+    layout_properties: {}
+    name: sales_page_link
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: '', icon: 'fa:bar-chart', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Sales, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    type: Link
+  - event_bindings: {click: reports_page_link_click}
+    layout_properties: {}
+    name: reports_page_link
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: '', icon: 'fa:pie-chart', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Reports, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    type: Link
+  - name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+  - event_bindings: {click: signout_link_click}
+    layout_properties: {}
+    name: signout_link
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: '', icon: 'fa:sign-out', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Sign out, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    type: Link
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {align: right}
+  type: FlowPanel
+- layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- components:
+  - layout_properties: {}
+    name: label_1
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 24, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Dashboard, tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties: {}
+    name: date_label
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 14, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: Label
+  layout_properties: {slot: title}
+  name: flow_panel_1
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true
