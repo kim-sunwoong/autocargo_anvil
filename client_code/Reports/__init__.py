@@ -43,6 +43,10 @@ class Reports(ReportsTemplate):
         values=[2650, 755, 9525]
       )
     ]
+
+  def plot_3_click(self, points, **event_args):
+    """This method is called when a data point is clicked."""
+    pass
     
 
     
