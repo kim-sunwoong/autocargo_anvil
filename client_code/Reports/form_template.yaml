@@ -1,5 +1,6 @@
 components:
-- layout_properties: {grid_position: 'CKDEYV,MBIWQZ'}
+- event_bindings: {change: drop_down_1_change}
+  layout_properties: {grid_position: 'CKDEYV,MBIWQZ'}
   name: drop_down_1
   properties:
     items: [A1-1, A1-2, A1-3, A1-4, A1-5]
@@ -29,7 +30,7 @@ components:
     type: Label
   - components:
     - layout_properties: {}
-      name: lb_robotid_copy
+      name: lb_power
       properties: {align: center, role: headline, spacing_above: none, text: 80%}
       type: Label
     layout_properties: {grid_position: 'CNSLPX,TDUMXX'}
@@ -49,7 +50,7 @@ components:
     - data_bindings: []
       layout_properties: {}
       name: lb_status
-      properties: {align: center, bold: false, foreground: '#00ff5c', role: headline, spacing_above: none, text: Activate}
+      properties: {align: center, bold: false, foreground: '', role: headline, spacing_above: none, text: Activate}
       type: Label
     layout_properties: {grid_position: 'EVUXKG,UNBRWE'}
     name: ppl_status
