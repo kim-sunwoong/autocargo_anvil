@@ -147,5 +147,7 @@ components:
   name: content_panel
   properties: {col_widths: '{}'}
   type: ColumnPanel
-container: {type: ColumnPanel}
+container:
+  properties: {col_widths: '{"BQMHCS":60}'}
+  type: ColumnPanel
 is_package: true
