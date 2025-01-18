@@ -49,9 +49,10 @@ db_schema:
     server: full
     title: Users
 dependencies: []
-name: Dashboard Template B
+metadata: {title: AutoCargoDashboard}
+name: AutoCargo
 native_deps: {head_html: ''}
-package_name: Dashboard_Template_B
+package_name: AutoCargo
 renamed: true
 runtime_options:
   client_version: '3'

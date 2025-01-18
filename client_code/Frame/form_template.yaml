@@ -28,10 +28,17 @@ components:
   type: ColumnPanel
 - components:
   - layout_properties: {}
+    name: label_2
+    properties: {foreground: 'theme:Primary', text: AutoCargo}
+    type: Label
+  - data_bindings: []
+    layout_properties: {}
     name: label_1
     properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 24, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Dashboard, tooltip: '', underline: false, visible: true}
     type: Label
-  - layout_properties: {}
+  - data_bindings:
+    - {code: 'self.item['''']', property: icon, writeback: false}
+    layout_properties: {}
     name: date_label
     properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 14, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
     type: Label
