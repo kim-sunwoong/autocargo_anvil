@@ -49,7 +49,7 @@ db_schema:
     server: full
     title: Users
 dependencies: []
-metadata: {title: AutoCargoDashboard}
+metadata: {logo_img: 'asset:autocargo_b.png', title: AutoCargoDashboard}
 name: AutoCargo
 native_deps: {head_html: ''}
 package_name: AutoCargo

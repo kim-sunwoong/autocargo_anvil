@@ -24,7 +24,10 @@ components:
   type: FlowPanel
 - layout_properties: {slot: default}
   name: content_panel
-  properties: {}
+  properties:
+    spacing:
+      margin: [null, '0', null, '0']
+      padding: [null, '24', null, '24']
   type: ColumnPanel
 - components:
   - layout_properties: {}

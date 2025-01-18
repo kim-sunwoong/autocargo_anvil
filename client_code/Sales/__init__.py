@@ -18,18 +18,11 @@ class Sales(SalesTemplate):
     #Get the y-values from the server
     self.y_values = anvil.server.call('return_data', "2023")
     self.create_line_graph()
-    
-    self.plot_2.data = [
-      go.Pie(
-        labels=["Completed", "In progress", "Needs Review", "Not started"],
-        values=[30, 21, 10, 39 ],
-        hole=.5
-      )
-    ]
+  
     
     #Set the contents of the data grid (which has a repeating panel inside) to the contents of 
     #the Files table. This is done on the secure server where you might only want to return user-visible data
-    self.repeating_panel_1.items = anvil.server.call('return_table')
+    #self.repeating_panel_1.items = anvil.server.call('return_table')
 
   def create_line_graph(self):
     self.plot_1.data = [

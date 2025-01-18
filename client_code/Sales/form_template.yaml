@@ -66,8 +66,52 @@ components:
       type: Label
     layout_properties: {grid_position: 'OARGYW,TXGLQI'}
     name: column_panel_4
-    properties: {col_widths: '{"YRVYCT":20,"FFPCPJ":40}', role: elevated-card, spacing_below: medium}
+    properties: {col_widths: '{"YRVYCT":20,"FFPCPJ":40,"COENXF":60}', role: elevated-card, spacing_below: medium}
     type: ColumnPanel
+  - layout_properties: {grid_position: 'IITZNF,PXQXMY'}
+    name: spacer_2
+    properties: {height: 53}
+    type: Spacer
+  - layout_properties: {grid_position: 'YKBJQQ,LNNNHD'}
+    name: label_14
+    properties: {text: From}
+    type: Label
+  - layout_properties: {grid_position: 'YKBJQQ,YEVJRD'}
+    name: text_box_1
+    properties: {}
+    type: TextBox
+  - layout_properties: {grid_position: 'YKBJQQ,OZGCME'}
+    name: label_14_copy
+    properties: {text: To}
+    type: Label
+  - layout_properties: {grid_position: 'YKBJQQ,VYQKHM'}
+    name: text_box_1_copy
+    properties: {}
+    type: TextBox
+  - layout_properties: {grid_position: 'GKZIHM,SMSHLZ'}
+    name: label_14_copy_copy
+    properties: {text: X}
+    type: Label
+  - layout_properties: {grid_position: 'GKZIHM,JVUMYP'}
+    name: text_box_1_copy_copy
+    properties: {}
+    type: TextBox
+  - layout_properties: {grid_position: 'GKZIHM,YAOQOB'}
+    name: label_14_copy_2
+    properties: {text: Y}
+    type: Label
+  - layout_properties: {grid_position: 'GKZIHM,WXJADK'}
+    name: text_box_1_copy_2
+    properties: {}
+    type: TextBox
+  - layout_properties: {grid_position: 'ZOXXCS,POXJHQ'}
+    name: button_1
+    properties: {text: Order}
+    type: Button
+  - layout_properties: {grid_position: 'PVGSKJ,ZZRAYS'}
+    name: spacer_2_copy
+    properties: {height: 19}
+    type: Spacer
   - components:
     - layout_properties: {grid_position: 'IXLTQK,NJNRPD'}
       name: label_13
@@ -92,62 +136,11 @@ components:
     name: column_panel_5
     properties: {col_widths: '{"CLTAVK":20,"HVGXTJ":40}', role: elevated-card, spacing_above: medium, spacing_below: medium}
     type: ColumnPanel
-  - components:
-    - layout_properties: {grid_position: 'FOMWXP,TSAUHR'}
-      name: label_14
-      properties: {role: title, text: Progress}
-      type: Label
-    - layout_properties: {grid_position: 'TOGLGU,ABBCUN'}
-      name: plot_2
-      properties: {height: 401}
-      type: Plot
-    layout_properties: {grid_position: 'EHGOWQ,HFZXDG'}
-    name: column_panel_6
-    properties: {role: elevated-card, spacing_above: medium}
-    type: ColumnPanel
-  - components:
-    - layout_properties: {grid_position: 'TNYAFM,UQBLVS'}
-      name: label_15
-      properties: {role: title, text: Files}
-      type: Label
-    - components:
-      - layout_properties: {}
-        name: repeating_panel_1
-        properties: {item_template: Sales.RowTemplate2, spacing_above: none, spacing_below: none}
-        type: RepeatingPanel
-      layout_properties: {grid_position: 'HSERAI,XHEUAK'}
-      name: data_grid_1
-      properties:
-        auto_header: true
-        background: ''
-        border: ''
-        columns:
-        - {$$hashKey: 'object:21080', data_key: filename, id: CTNKHD, title: Filename}
-        - {$$hashKey: 'object:21081', data_key: author, id: NDMKDN, title: Author}
-        - {$$hashKey: 'object:21082', data_key: created, id: JOECZM, title: Created}
-        foreground: ''
-        role: tonal-data-grid
-        rows_per_page: 20
-        show_page_controls: true
-        spacing_above: small
-        spacing_below: small
-        tooltip: ''
-        visible: true
-        wrap_on: never
-      type: DataGrid
-    layout_properties:
-      col_widths: {}
-      grid_position: EHGOWQ,EJBPUG
-    name: column_panel_7
-    properties: {col_widths: '{}', role: elevated-card, spacing_above: medium}
-    type: ColumnPanel
-  layout_properties:
-    col_widths: {}
-    grid_position: AOHXDM,BQMHCS
+  layout_properties: {full_width_row: false, grid_position: 'DHSHRE,QDQDFV'}
   name: content_panel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"LNNNHD":10,"YEVJRD":20,"OZGCME":10,"VYQKHM":20,"SMSHLZ":10,"JVUMYP":20,"YAOQOB":10,"WXJADK":20,"PXQXMY":60}'}
   type: ColumnPanel
 container:
-  properties: {col_widths: '{"BQMHCS":60}'}
+  properties: {col_widths: '{}'}
   type: ColumnPanel
 is_package: true
