@@ -21,9 +21,9 @@ class Frame(FrameTemplate):
     #Set the Plotly plots template to match the theme of the app
     Plot.templates.default = "material_light"
     #When the app starts up, the Sales form will be added to the page
-    self.content_panel.add_component(Sales())
+    self.content_panel.add_component(Logout())
     #Change the role of the sales_page_link to look selected
-    self.sales_page_link.role = "selected"
+    self.signout_link.role = "selected"
     self.date_label.text = datetime.today().strftime("%B %d, %Y")
 
   
@@ -35,6 +35,8 @@ class Frame(FrameTemplate):
     #Make the sales_page_link look selected and deselect the reports_page_link
     self.sales_page_link.role = "selected"
     self.reports_page_link.role = "default"
+    self.signout_link.role = "default"
+
 
   def reports_page_link_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -44,6 +46,7 @@ class Frame(FrameTemplate):
     #Make the reports_page_link look selected and deselect the sales_page_link
     self.reports_page_link.role = "selected"
     self.sales_page_link.role = "default"
+    self.signout_link.role = "default"
     
   #If using the Users service, uncomment this code to log out the user:
   # def signout_link_click(self, **event_args):
@@ -53,7 +56,9 @@ class Frame(FrameTemplate):
 
   def signout_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    pass
+    self.content_panel.clear()
+    self.content_panel.add_component(Logout())
 
-
-
+    self.signout_link.role = "selected"
+    self.reports_page_link.role = "default"
+    self.sales_page_link.role = "default"

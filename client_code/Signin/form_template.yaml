@@ -1,0 +1,11 @@
+components:
+- layout_properties: {grid_position: 'WILQOI,IXWOPP'}
+  name: spacer_1
+  properties: {height: 141}
+  type: Spacer
+- layout_properties: {grid_position: 'AWGQNT,HDPHUJ'}
+  name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+container: {type: ColumnPanel}
+is_package: true
