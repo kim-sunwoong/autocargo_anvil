@@ -22,7 +22,7 @@ class Frame(FrameTemplate):
     Plot.templates.default = "material_light"
     #When the app starts up, the Sales form will be added to the page
     
-    self.content_panel.add_component(Logout())
+    self.content_panel.add_component(Login())
     #Change the role of the sales_page_link to look selected
     self.signout_link.role = "selected"
     self.date_label.text = datetime.today().strftime("%B %d, %Y")
@@ -65,14 +65,10 @@ class Frame(FrameTemplate):
     self.sales_page_link.role = "default"
     self.signout_link.role = "default"
     
-  #If using the Users service, uncomment this code to log out the user:
-  # def signout_link_click(self, **event_args):
-  #   """This method is called when the link is clicked"""
-  #   anvil.users.logout()
-  #   open_form('Logout')
-
   def signout_link_click(self, **event_args):
     """This method is called when the link is clicked"""
+    anvil.users.logout()
+    open_form('Logout')
     self.content_panel.clear()
     self.content_panel.add_component(Logout())
 
