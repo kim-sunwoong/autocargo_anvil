@@ -6,22 +6,27 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-
 class Login(LoginTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     
-
   def login_btn_click(self, **event_args):
-    email = self.email_box.text
-    password = self.password_box.text
-    
+    email = self.email_box.text.strip()  # Ensure no leading/trailing whitespace
+    password = self.password_box.text.strip()
+
+    if not email or not password:
+        alert("Please enter both email and password.", title="Missing Information")
+        return
+
     try:
         user = anvil.users.login_with_email(email, password)
         if user:
             alert("Login successful!", title="Welcome")
+            open_form('HomePage')  # Redirect to another form
     except anvil.users.AuthenticationFailed:
         alert("Incorrect email or password. Please try again.", title="Login Failed")
     except anvil.users.UserNotFound:
-        alert("No account found for this email. Please sign up.", title="Login Failed")
+        alert("No account found for this email. Please contact support.", title="Login Failed")
+    except Exception as e:
+        alert(f"An unexpected error occurred: {e}", title="Error")
