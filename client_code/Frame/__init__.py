@@ -21,17 +21,34 @@ class Frame(FrameTemplate):
     #Set the Plotly plots template to match the theme of the app
     Plot.templates.default = "material_light"
     #When the app starts up, the Sales form will be added to the page
+    
     self.content_panel.add_component(Logout())
     #Change the role of the sales_page_link to look selected
     self.signout_link.role = "selected"
     self.date_label.text = datetime.today().strftime("%B %d, %Y")
+    
+  #@anvil.server.callable
+  def get_secret_data(self):
+    user = anvil.users.get_user()
+    if user['email'] == 'sunwoong.kim@gmail.com':
+      return True
+    else:
+      return False
 
+  def login_fail_error(self, err):
+    alert(str(err), title="No Permission")
+
+  
   
   def sales_page_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     #Clear the content panel and add the Sales Form
     self.content_panel.clear()
-    self.content_panel.add_component(Sales())
+    if self.get_secret_data():
+      self.content_panel.add_component(Sales())
+    else:
+      set_default_error_handling(self.login_fail_error)
+      
     #Make the sales_page_link look selected and deselect the reports_page_link
     self.sales_page_link.role = "selected"
     self.reports_page_link.role = "default"

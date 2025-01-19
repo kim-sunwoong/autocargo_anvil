@@ -69,49 +69,68 @@ components:
     properties: {col_widths: '{"YRVYCT":20,"FFPCPJ":40,"COENXF":60}', role: elevated-card, spacing_below: medium}
     type: ColumnPanel
   - components:
-    - layout_properties: {grid_position: 'ECSLXW,FSRXYZ'}
-      name: label_14
-      properties: {text: From}
-      type: Label
-    - layout_properties: {grid_position: 'ECSLXW,IKYTTO'}
-      name: text_box_1_copy_2
+    - components:
+      - layout_properties: {grid_position: 'MLXBKZ,DSQFFD'}
+        name: label_14
+        properties: {text: From}
+        type: Label
+      - layout_properties: {grid_position: 'MLXBKZ,CDWSBL'}
+        name: text_box_1_copy_2
+        properties: {}
+        type: TextBox
+      - layout_properties: {grid_position: 'QXGWZA,BPQTWI'}
+        name: label_14_copy
+        properties: {text: To}
+        type: Label
+      - layout_properties: {grid_position: 'QXGWZA,RXBYGA'}
+        name: text_box_1_copy
+        properties: {}
+        type: TextBox
+      layout_properties: {grid_position: 'HFAAZJ,PWDHZA'}
+      name: column_panel_7
+      properties: {col_widths: '{"DSQFFD":15,"CDWSBL":45,"BPQTWI":15,"RXBYGA":45}'}
+      type: ColumnPanel
+    - components:
+      - layout_properties: {grid_position: 'JBLIWM,OLVCNK'}
+        name: spacer_2
+        properties: {height: 26}
+        type: Spacer
+      - layout_properties: {grid_position: 'TIFODK,RLEAUI'}
+        name: label_15
+        properties: {align: center, foreground: 'theme:Disabled Container', text: or}
+        type: Label
+      layout_properties: {grid_position: 'HFAAZJ,JAQXFA'}
+      name: column_panel_9
       properties: {}
-      type: TextBox
-    - layout_properties: {grid_position: 'VQZQTF,ZMIOSC'}
-      name: label_14_copy
-      properties: {text: To}
-      type: Label
-    - layout_properties: {grid_position: 'VQZQTF,DNWSZI'}
-      name: text_box_1_copy
-      properties: {}
-      type: TextBox
-    - layout_properties: {grid_position: 'CCCDSU,KVOSQO'}
-      name: label_15
-      properties: {align: center, foreground: 'theme:Disabled Container', text: or}
-      type: Label
-    - layout_properties: {grid_position: 'BQQLNA,HXVAUD'}
-      name: label_14_copy_2
-      properties: {text: Y}
-      type: Label
-    - layout_properties: {grid_position: 'BQQLNA,CHMTGP'}
-      name: text_box_1_copy_copy
-      properties: {}
-      type: TextBox
-    - layout_properties: {grid_position: ',FKOUVP'}
-      name: label_14_copy_copy
-      properties: {text: X}
-      type: Label
-    - layout_properties: {grid_position: ',BOJYSW'}
-      name: text_box_1
-      properties: {}
-      type: TextBox
+      type: ColumnPanel
+    - components:
+      - layout_properties: {grid_position: 'LTPPXT,ZYJWFH'}
+        name: label_14_copy_copy
+        properties: {text: X}
+        type: Label
+      - layout_properties: {grid_position: 'LTPPXT,ZHRWCH'}
+        name: text_box_1_copy_copy
+        properties: {}
+        type: TextBox
+      - layout_properties: {grid_position: 'EXCCUS,ZPLVUZ'}
+        name: label_14_copy_2
+        properties: {text: Y}
+        type: Label
+      - layout_properties: {grid_position: 'EXCCUS,LOETLF'}
+        name: text_box_1
+        properties: {}
+        type: TextBox
+      layout_properties: {grid_position: 'HFAAZJ,ZNLTNE'}
+      name: column_panel_8
+      properties: {col_widths: '{"ZYJWFH":15,"ZHRWCH":45,"ZPLVUZ":15,"LOETLF":45}'}
+      type: ColumnPanel
     - layout_properties: {grid_position: 'WQQGNS,GNMCSF'}
       name: button_1
       properties: {role: filled-button, text: Order}
       type: Button
-    layout_properties: {grid_position: 'SEWAKR,EYNXZR'}
+    layout_properties: {grid_position: 'PZEKVB,MKBEJS'}
     name: column_panel_6
-    properties: {role: elevated-card}
+    properties: {col_widths: '{"PWDHZA":25,"JAQXFA":10,"ZNLTNE":25}', role: elevated-card}
     type: ColumnPanel
   - components:
     - layout_properties: {grid_position: 'IXLTQK,NJNRPD'}
