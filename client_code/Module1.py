@@ -21,17 +21,20 @@ from anvil.tables import app_tables
 def say_hello():
   print("Hello, world")
 
-def login_user(self):
-  try:
-      # Prompt user to log in with email and password
-      user = anvil.users.login_with_email(email="user@example.com", password="password123")
-      if user:
+def login_btn_click(self, **event_args):
+    email = self.txt_email.text.strip()
+    password = self.txt_password.text.strip()
+
+    if not email or not password:
+        alert("Please enter both email and password.", title="Missing Information")
+        return
+    try:
+        user = anvil.users.login_with_email(email, password)
+        if user:
           alert("Login successful!", title="Welcome")
-      else:
-          alert("Login failed. Please try again.", title="Error")
-  except anvil.users.AuthenticationFailed:
-      alert("Incorrect password. Please try again.", title="Login Failed")
-  except anvil.users.UserNotFound:
-      alert("No account found for this email. Please sign up first.", title="Login Failed")
-  except Exception as e:
-      alert(f"An unexpected error occurred: {e}", title="Error")
+          return True
+    except anvil.users.AuthenticationFailed:
+        alert("Incorrect email or password. Please try again.", title="Login Failed")
+    except Exception as e:
+        alert(f"An unexpected error occurred: {e}", title="Error")
+

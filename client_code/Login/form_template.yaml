@@ -1,4 +1,21 @@
 components:
+- layout_properties: {grid_position: 'WSPNZU,JVFKTI'}
+  name: spacer_1_copy
+  properties: {height: 37.82421875}
+  type: Spacer
+- components:
+  - layout_properties: {grid_position: 'YHWWXM,AHREXP'}
+    name: label_1
+    properties: {align: center, role: headline, text: 오토카고 관리자 시스테}
+    type: Label
+  layout_properties: {grid_position: 'BQNVSG,ARQTGK'}
+  name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {grid_position: 'WCXLEL,JQJNLG'}
+  name: spacer_1
+  properties: {height: 38.48046875}
+  type: Spacer
 - components:
   - layout_properties: {grid_position: 'OMDBIB,JYYGPZ'}
     name: label_3
@@ -13,10 +30,8 @@ components:
     name: lb_email
     properties: {text: email}
     type: Label
-  - data_bindings:
-    - {code: 'self.item['''']', property: enabled, writeback: false}
-    event_bindings: {}
-    layout_properties: {grid_position: 'ZTGNFW,QBBDSU'}
+  - event_bindings: {}
+    layout_properties: {grid_position: 'ZTGNFW,CKAUUC'}
     name: txt_email
     properties: {}
     type: TextBox
@@ -25,7 +40,7 @@ components:
     properties: {text: password}
     type: Label
   - event_bindings: {}
-    layout_properties: {grid_position: 'RRZOXW,KBVBBR PSUMRY,EDHYXG'}
+    layout_properties: {grid_position: 'RRZOXW,KBVBBR'}
     name: txt_password
     properties: {}
     type: TextBox

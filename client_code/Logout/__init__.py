@@ -11,9 +11,10 @@ class Logout(LogoutTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+    self. = None
+
     # Any code you write here will run before the form opens.
 
   def signin_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    #anvil.users.login_with_form()
-    self.login_user()
+    

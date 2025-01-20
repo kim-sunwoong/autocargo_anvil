@@ -25,9 +25,11 @@ components:
 - layout_properties: {slot: default}
   name: content_panel
   properties:
+    col_spacing: medium
     spacing:
       margin: [null, '0', null, '0']
-      padding: [null, '24', null, '24']
+      padding: [null, 9, null, 9]
+    wrap_on: mobile
   type: ColumnPanel
 - components:
   - layout_properties: {}
@@ -44,6 +46,9 @@ components:
     layout_properties: {}
     name: date_label
     properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 14, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: Label
+  - name: label_3
+    properties: {}
     type: Label
   layout_properties: {slot: title}
   name: flow_panel_1
