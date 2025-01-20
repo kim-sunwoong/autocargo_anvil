@@ -1,32 +1,29 @@
-from ._anvil_designer import LoginTemplate
+from ._anvil_designer import LoginTemplate  # Import the template for this form
 from anvil import *
 import anvil.server
 import anvil.users
 import anvil.tables as tables
-import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class Login(LoginTemplate):
-  def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
-    
-  def login_btn_click(self, **event_args):
-    email = self.email_box.text.strip()  # Ensure no leading/trailing whitespace
-    password = self.password_box.text.strip()
+    def __init__(self, **properties):
+        # Set Form properties and Data Bindings.
+        self.init_components(**properties)
 
-    if not email or not password:
-        alert("Please enter both email and password.", title="Missing Information")
-        return
+    def login_btn_click(self, **event_args):
+        email = self.email_box.text.strip()
+        password = self.password_box.text.strip()
 
-    try:
-        user = anvil.users.login_with_email(email, password)
-        if user:
-            alert("Login successful!", title="Welcome")
-            open_form('HomePage')  # Redirect to another form
-    except anvil.users.AuthenticationFailed:
-        alert("Incorrect email or password. Please try again.", title="Login Failed")
-    except anvil.users.UserNotFound:
-        alert("No account found for this email. Please contact support.", title="Login Failed")
-    except Exception as e:
-        alert(f"An unexpected error occurred: {e}", title="Error")
+        if not email or not password:
+            alert("Please enter both email and password.", title="Missing Information")
+            return
+
+        try:
+            user = anvil.users.login_with_email(email, password)
+            if user:
+                alert("Login successful!", title="Welcome")
+                open_form('HomePage')
+        except anvil.users.AuthenticationFailed:
+            alert("Incorrect email or password. Please try again.", title="Login Failed")
+        except Exception as e:
+            alert(f"An unexpected error occurred: {e}", title="Error")

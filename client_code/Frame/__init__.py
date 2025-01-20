@@ -22,7 +22,7 @@ class Frame(FrameTemplate):
     Plot.templates.default = "material_light"
     #When the app starts up, the Sales form will be added to the page
     
-    self.content_panel.add_component()
+    self.content_panel.add_component(L())
     #Change the role of the sales_page_link to look selected
     self.signout_link.role = "selected"
     self.date_label.text = datetime.today().strftime("%B %d, %Y")
@@ -38,8 +38,6 @@ class Frame(FrameTemplate):
   def login_fail_error(self, err):
     alert(str(err), title="No Permission")
 
-  
-  
   def sales_page_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     #Clear the content panel and add the Sales Form

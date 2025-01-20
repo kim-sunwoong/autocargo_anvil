@@ -67,7 +67,7 @@ components:
     type: Label
   - layout_properties: {grid_position: 'GNXUXB,COFOCP'}
     name: image_1
-    properties: {display_mode: shrink_to_fit, height: 406, source: _/theme/스크린샷 2025-01-14 오후 2.58.26.png}
+    properties: {display_mode: shrink_to_fit, height: 406, source: _/theme/map_example.png}
     type: Image
   layout_properties: {grid_position: 'QPRPQW,PGFMHD'}
   name: column_panel_4

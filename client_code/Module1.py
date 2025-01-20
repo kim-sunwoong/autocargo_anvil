@@ -1,24 +1,26 @@
-from ._anvil_designer import LogoutTemplate
+import anvil.server
+import anvil.users
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 from anvil import *
 import anvil.server
 import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+# This is a module.
+# You can define variables and functions here, and use them from any form. For example, in a top-level form:
+#
+#    from .. import Module1
+#
+#    Module1.say_hello()
+#
 
-class Logout(LogoutTemplate):
-  def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
+def say_hello():
+  print("Hello, world")
 
-  def signin_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    #anvil.users.login_with_form()
-    self.login_user()
-
-    
 def login_user(self):
   try:
       # Prompt user to log in with email and password
@@ -33,4 +35,3 @@ def login_user(self):
       alert("No account found for this email. Please sign up first.", title="Login Failed")
   except Exception as e:
       alert(f"An unexpected error occurred: {e}", title="Error")
-  
