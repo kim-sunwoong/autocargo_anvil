@@ -8,8 +8,6 @@ import anvil.server
 from ..Control import Control
 from ..Reports import Reports
 from ..Login import Login
-from .. import Module1
-
 from datetime import datetime
 
 

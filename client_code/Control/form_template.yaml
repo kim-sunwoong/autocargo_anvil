@@ -152,10 +152,10 @@ components:
       name: spacer_1
       properties: {height: 32}
       type: Spacer
-    - layout_properties: {grid_position: 'GSIUPY,BLIBFH'}
-      name: plot_1
-      properties: {}
-      type: Plot
+    - layout_properties: {grid_position: 'XRPFBR,ZMUBJL'}
+      name: image_1
+      properties: {display_mode: zoom_to_fill, height: 502.921875, source: _/theme/스크린샷 2025-01-20 오후 1.41.18.png}
+      type: Image
     layout_properties: {grid_position: 'KQTZOY,ARAVEF'}
     name: column_panel_5
     properties: {col_widths: '{"CLTAVK":20,"HVGXTJ":40}', role: elevated-card, spacing_above: medium, spacing_below: medium}
