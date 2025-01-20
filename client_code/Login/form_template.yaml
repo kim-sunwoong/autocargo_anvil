@@ -5,32 +5,37 @@ components:
     properties: {align: center, role: title, text: Login}
     type: Label
   layout_properties: {grid_position: 'AWGQNT,HDPHUJ'}
-  name: column_panel_1
+  name: title_panel
   properties: {col_widths: '{}'}
   type: ColumnPanel
 - components:
   - layout_properties: {grid_position: 'ZTGNFW,WKCPQW'}
-    name: label_1
+    name: lb_email
     properties: {text: email}
     type: Label
-  - layout_properties: {grid_position: 'ZTGNFW,QBBDSU'}
-    name: email_box
+  - data_bindings:
+    - {code: 'self.item['''']', property: enabled, writeback: false}
+    event_bindings: {}
+    layout_properties: {grid_position: 'ZTGNFW,QBBDSU'}
+    name: txt_email
     properties: {}
     type: TextBox
   - layout_properties: {grid_position: 'RRZOXW,XLQFPX'}
-    name: label_2
+    name: lb_password
     properties: {text: password}
     type: Label
-  - layout_properties: {grid_position: 'RRZOXW,KBVBBR'}
-    name: password_box
+  - event_bindings: {}
+    layout_properties: {grid_position: 'RRZOXW,KBVBBR PSUMRY,EDHYXG'}
+    name: txt_password
     properties: {}
     type: TextBox
-  - layout_properties: {grid_position: 'PRGOUS,DAUNFV'}
+  - event_bindings: {click: login_btn_click}
+    layout_properties: {grid_position: 'PRGOUS,DAUNFV'}
     name: login_btn
     properties: {role: filled-button, text: Login}
     type: Button
   layout_properties: {grid_position: 'CUGBIU,VMSOQN'}
-  name: column_panel_2
+  name: login_panel
   properties: {col_widths: '{}', role: elevated-card}
   type: ColumnPanel
 container: {type: ColumnPanel}

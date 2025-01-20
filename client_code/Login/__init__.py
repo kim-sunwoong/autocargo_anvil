@@ -11,8 +11,8 @@ class Login(LoginTemplate):
         self.init_components(**properties)
 
     def login_btn_click(self, **event_args):
-        email = self.email_box.text.strip()
-        password = self.password_box.text.strip()
+        email = self.txt_email.text.strip()
+        password = self.txt_password.text.strip()
 
         if not email or not password:
             alert("Please enter both email and password.", title="Missing Information")
@@ -22,7 +22,6 @@ class Login(LoginTemplate):
             user = anvil.users.login_with_email(email, password)
             if user:
                 alert("Login successful!", title="Welcome")
-                open_form('HomePage')
         except anvil.users.AuthenticationFailed:
             alert("Incorrect email or password. Please try again.", title="Login Failed")
         except Exception as e:
