@@ -36,7 +36,7 @@ components:
     type: Button
   layout_properties: {grid_position: 'CUGBIU,VMSOQN'}
   name: login_panel
-  properties: {col_widths: '{}', role: elevated-card}
+  properties: {col_widths: '{}', role: tonal-card}
   type: ColumnPanel
 container: {type: ColumnPanel}
 is_package: true
