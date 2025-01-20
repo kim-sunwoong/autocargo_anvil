@@ -22,7 +22,7 @@ class Frame(FrameTemplate):
     Plot.templates.default = "material_light"
     #When the app starts up, the Sales form will be added to the page
     
-    self.content_panel.add_component(Logout())
+    self.content_panel.add_component(Login())
     #Change the role of the sales_page_link to look selected
     self.signout_link.role = "selected"
     self.date_label.text = datetime.today().strftime("%B %d, %Y")
