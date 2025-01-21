@@ -21,14 +21,29 @@ class Login(LoginTemplate):
             alert("Please enter both email and password.", title="Missing Information")
             return
 
+        # try:
+        #     user = anvil.users.login_with_email(email, password)
+        #     if user:
+        #         alert("Login successful!", title="Welcome")
+        #         # Call the callback if it's set
+        #         if self.on_login_success:
+        #             self.on_login_success()  # Trigger the parent's action
+        # except anvil.users.AuthenticationFailed:
+        #     alert("Incorrect email or password. Please try again.", title="Login Failed")
+        # except Exception as e:
+        #     alert(f"An unexpected error occurred: {e}", title="Error")
+  
         try:
-            user = anvil.users.login_with_email(email, password)
-            if user:
-                alert("Login successful!", title="Welcome")
-                # Call the callback if it's set
-                if self.on_login_success:
-                    self.on_login_success()  # Trigger the parent's action
+          valid_credentials = {
+              'cha': '1',
+              'starsister22': '1234',
+              'sunny': '1234'
+          }
+          if email in valid_credentials and password == valid_credentials[email]:
+            if self.on_login_success:
+              self.on_login_success()
+              alert("You are Logged In!",title="Login Success")
         except anvil.users.AuthenticationFailed:
-            alert("Incorrect email or password. Please try again.", title="Login Failed")
+              alert("Incorrect email or password. Please try again.", title="Login Failed")
         except Exception as e:
-            alert(f"An unexpected error occurred: {e}", title="Error")
+              alert(f"An unexpected error occurred: {e}", title="Error")
