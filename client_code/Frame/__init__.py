@@ -62,7 +62,10 @@ class Frame(FrameTemplate):
         self.user_login_status = False
         anvil.users.logout()
         self.content_panel.clear()
-        self.content_panel.add_component(Login())
+        login_form = Login()
+        login_form.on_login_success = self.login_success  # Set callback
+        self.content_panel.add_component(login_form)
+      
         self.signout_link.role = "selected"
         self.reports_page_link.role = "default"
         self.sales_page_link.role = "default"
