@@ -12,6 +12,8 @@ class Control(ControlTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+    
+
     #Set the contents of the data grid (which has a repeating panel inside) to the contents of 
     #the Files table. This is done on the secure server where you might only want to return user-visible data
     #self.repeating_panel_1.items = anvil.server.call('return_table')

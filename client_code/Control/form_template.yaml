@@ -6,15 +6,15 @@ components:
 - components:
   - components:
     - layout_properties: {grid_position: 'EAHYGC,TNWZRZ'}
-      name: label_3
+      name: icon_robotid
       properties: {font_size: 50, foreground: 'theme:Primary', icon: 'fa:qq'}
       type: Label
     - layout_properties: {grid_position: 'EAHYGC,OMZVBT JKXVFD,PJCQKK'}
-      name: label_2
+      name: txt_robotid
       properties: {foreground: 'theme:Secondary', role: body, text: ROBOT ID}
       type: Label
     - layout_properties: {grid_position: 'EAHYGC,OMZVBT HOVUSG,DMNCRA'}
-      name: label_1
+      name: lb_robotid
       properties: {role: headline, spacing_above: none, text: A1-1}
       type: Label
     layout_properties: {grid_position: 'OARGYW,IRYBAJ'}
@@ -23,7 +23,7 @@ components:
     type: ColumnPanel
   - components:
     - layout_properties: {grid_position: 'CLLCRL,INNBGO'}
-      name: label_4
+      name: icon_battery
       properties: {font_size: 50, foreground: 'theme:Primary', icon: 'fa:battery'}
       type: Label
     - layout_properties: {grid_position: 'CLLCRL,XWEVHH WANAJS,GLUVDP'}
@@ -31,7 +31,7 @@ components:
       properties: {foreground: 'theme:Secondary', role: body, text: POWER}
       type: Label
     - layout_properties: {grid_position: 'CLLCRL,XWEVHH JQUSGE,YRIGOC'}
-      name: label_6
+      name: lb_battery
       properties: {role: headline, spacing_above: none, text: 83%}
       type: Label
     layout_properties: {grid_position: 'OARGYW,GIMQEV'}
@@ -40,15 +40,11 @@ components:
     type: ColumnPanel
   - components:
     - layout_properties: {grid_position: 'QCBMRS,UVHIRE'}
-      name: label_9
+      name: icon_status
       properties: {font_size: 50, foreground: 'theme:Primary', icon: 'fa:warning'}
       type: Label
-    - layout_properties: {grid_position: 'QCBMRS,NTDKYZ SGSOQF,MWJXWJ'}
-      name: label_7
-      properties: {foreground: 'theme:Secondary', role: body, text: Status}
-      type: Label
     - layout_properties: {grid_position: 'QCBMRS,NTDKYZ XSCLAF,ARCBUZ'}
-      name: label_8
+      name: lb_status
       properties: {role: headline, spacing_above: none, text: Charing}
       type: Label
     layout_properties: {grid_position: 'OARGYW,CELVTD'}
@@ -65,7 +61,7 @@ components:
       properties: {foreground: 'theme:Secondary', role: body, text: TARGET}
       type: Label
     - layout_properties: {grid_position: 'DLVLSV,FFPCPJ YJFWAG,COENXF'}
-      name: label_11
+      name: lb_targetloc
       properties: {role: headline, spacing_above: none, text: N/A}
       type: Label
     layout_properties: {grid_position: 'OARGYW,TXGLQI'}
