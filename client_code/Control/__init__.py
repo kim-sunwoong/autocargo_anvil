@@ -11,7 +11,8 @@ class Control(ControlTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    self.pinky_battery = "80"
+    self.lb_power.text = self.pinky_battery
     
 
     #Set the contents of the data grid (which has a repeating panel inside) to the contents of 

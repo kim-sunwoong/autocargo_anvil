@@ -18,24 +18,24 @@ components:
       properties: {role: headline, spacing_above: none, text: A1-1}
       type: Label
     layout_properties: {grid_position: 'OARGYW,IRYBAJ'}
-    name: column_panel_1
+    name: cp_robotid
     properties: {col_widths: '{"OMZVBT":50,"TNWZRZ":25}', role: elevated-card, spacing_below: medium}
     type: ColumnPanel
   - components:
     - layout_properties: {grid_position: 'CLLCRL,INNBGO'}
-      name: icon_battery
+      name: icon_power
       properties: {font_size: 50, foreground: 'theme:Primary', icon: 'fa:battery'}
       type: Label
     - layout_properties: {grid_position: 'CLLCRL,XWEVHH WANAJS,GLUVDP'}
-      name: label_5
+      name: txt_power
       properties: {foreground: 'theme:Secondary', role: body, text: POWER}
       type: Label
     - layout_properties: {grid_position: 'CLLCRL,XWEVHH JQUSGE,YRIGOC'}
-      name: lb_battery
+      name: lb_power
       properties: {role: headline, spacing_above: none, text: 83%}
       type: Label
     layout_properties: {grid_position: 'OARGYW,GIMQEV'}
-    name: column_panel_2
+    name: cp_power
     properties: {col_widths: '{"INNBGO":20,"XWEVHH":40}', role: elevated-card, spacing_below: medium}
     type: ColumnPanel
   - components:
@@ -43,29 +43,33 @@ components:
       name: icon_status
       properties: {font_size: 50, foreground: 'theme:Primary', icon: 'fa:warning'}
       type: Label
-    - layout_properties: {grid_position: 'QCBMRS,NTDKYZ XSCLAF,ARCBUZ'}
+    - layout_properties: {grid_position: 'QCBMRS,NTDKYZ WIWMAL,IMMNFL'}
+      name: txt_status
+      properties: {foreground: 'theme:Secondary', role: body, text: STATUS}
+      type: Label
+    - layout_properties: {grid_position: 'QCBMRS,NTDKYZ'}
       name: lb_status
       properties: {role: headline, spacing_above: none, text: Charing}
       type: Label
     layout_properties: {grid_position: 'OARGYW,CELVTD'}
-    name: column_panel_3
+    name: cp_status
     properties: {col_widths: '{"UVHIRE":20,"NTDKYZ":40}', role: elevated-card, spacing_below: medium}
     type: ColumnPanel
   - components:
     - layout_properties: {grid_position: 'DLVLSV,YRVYCT'}
-      name: label_12
+      name: icon_target
       properties: {font_size: 50, foreground: 'theme:Primary', icon: 'fa:location-arrow'}
       type: Label
     - layout_properties: {grid_position: 'DLVLSV,FFPCPJ EAAHVH,CQXYQN'}
-      name: label_10
+      name: txt_target
       properties: {foreground: 'theme:Secondary', role: body, text: TARGET}
       type: Label
     - layout_properties: {grid_position: 'DLVLSV,FFPCPJ YJFWAG,COENXF'}
-      name: lb_targetloc
+      name: lb_target
       properties: {role: headline, spacing_above: none, text: N/A}
       type: Label
     layout_properties: {grid_position: 'OARGYW,TXGLQI'}
-    name: column_panel_4
+    name: cp_target
     properties: {col_widths: '{"YRVYCT":20,"FFPCPJ":40,"COENXF":60}', role: elevated-card, spacing_below: medium}
     type: ColumnPanel
   - components:
